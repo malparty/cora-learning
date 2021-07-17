@@ -117,7 +117,13 @@ export default function Profile() {
                 <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <form netlify method="POST" name="registrations_basic">
+                      <form
+                        netlify
+                        data-netlify="true"
+                        method="POST"
+                        action="/apply-success"
+                        name="registrations_basic"
+                      >
                         <div>
                           <input
                             type="email"
