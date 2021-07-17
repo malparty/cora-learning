@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
@@ -13,7 +14,7 @@ export default function Profile() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+                "url('https://images.unsplash.com/photo-1470608756445-2c9906b0680f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
             }}
           >
             <span
@@ -49,46 +50,48 @@ export default function Profile() {
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     <div className="relative">
                       <img
-                        alt="..."
-                        src="/img/team-2-800x800.jpg"
+                        alt="Student preparing an entry test"
+                        src="/img/cora/study.png"
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                       />
                     </div>
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                     <div className="py-6 px-3 mt-32 sm:mt-0">
-                      <button
-                        className="bg-blueGray-700 active:bg-blueGray-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Connect
-                      </button>
+                      <Link href="/#sectionBasicOnline">
+                        <button
+                          className="bg-blueGray-700 active:bg-blueGray-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1 ease-linear transition-all duration-150"
+                          type="button"
+                        >
+                          More details
+                        </button>
+                      </Link>
                     </div>
                   </div>
                   <div className="w-full lg:w-4/12 px-4 lg:order-1">
                     <div className="flex justify-center py-4 lg:pt-4 pt-8">
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                          22
+                          8
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Friends
+                          Students
                         </span>
                       </div>
                       <div className="mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                          10
+                          20
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Photos
+                          Lessons
                         </span>
                       </div>
                       <div className="lg:mr-4 p-3 text-center">
                         <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">
-                          89
+                          5.0 - 5.5
                         </span>
                         <span className="text-sm text-blueGray-400">
-                          Comments
+                          From 4.0 - 4.5
                         </span>
                       </div>
                     </div>
@@ -96,38 +99,39 @@ export default function Profile() {
                 </div>
                 <div className="text-center mt-12">
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                    Jenna Stones
+                    IELTS Basic
                   </h3>
                   <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-                    <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>{" "}
-                    Los Angeles, California
+                    <i className="fas fa-headset mr-2 text-lg text-blueGray-400"></i>{" "}
+                    Online class
                   </div>
                   <div className="mb-2 text-blueGray-600 mt-10">
-                    <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>
-                    Solution Manager - Creative Tim Officer
+                    <i className="fas fa-pen-fancy mr-2 text-lg text-blueGray-400"></i>
+                    Prepare a small registration tests
                   </div>
                   <div className="mb-2 text-blueGray-600">
-                    <i className="fas fa-university mr-2 text-lg text-blueGray-400"></i>
-                    University of Computer Science
+                    <i className="fas fa-calculator mr-2 text-lg text-blueGray-400"></i>
+                    We will reach you with the results
                   </div>
                 </div>
                 <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full lg:w-9/12 px-4">
-                      <p className="mb-4 text-lg leading-relaxed text-blueGray-700">
-                        An artist of considerable range, Jenna the name taken by
-                        Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                        performs and records all of his own music, giving it a
-                        warm, intimate feel with a solid groove structure. An
-                        artist of considerable range.
-                      </p>
-                      <a
-                        href="#pablo"
-                        className="font-normal text-lightBlue-500"
-                        onClick={(e) => e.preventDefault()}
-                      >
-                        Show more
-                      </a>
+                      <form netlify method="POST" name="registrations_basic">
+                        <div>
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Your email"
+                          />
+                        </div>
+                        <button
+                          className="bg-emerald-400 bg-indigo-200 mt-2 p-2 text-blueGray-100"
+                          type="submit"
+                        >
+                          Send me a test to register!
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>

@@ -19,6 +19,7 @@ export default function Index() {
                 Lớp ielts của Thư
               </p>
               <p className="mt-4 text-xl leading-relaxed text-blueGray-500">
+                <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                 An Hải Tây, Sơn Trà, Đà Nẵng
               </p>
             </div>
@@ -32,7 +33,7 @@ export default function Index() {
           </div>
         </div>
       </section>
-
+      <div id="sectionBasicOnline"></div>
       <section className="mt-48 md:mt-40 relative bg-blueGray-100">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
